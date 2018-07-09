@@ -19,7 +19,8 @@ class HomeViewController: SuperViewController {
         sc.showsHorizontalScrollIndicator = false
         sc.contentSize = CGSize.init(width: Screen_Width*4, height: 0)
         sc.isPagingEnabled = true
-        
+        sc.delegate = self
+        sc.isScrollEnabled = false
         sc.contentInsetAdjustmentBehavior = .never
         
         let first = FirstViewController()
@@ -111,7 +112,7 @@ class HomeViewController: SuperViewController {
             
             let keyStr = dic[keyString] as! String
             if keyStr == "tapPageMenu" {
-                
+                // 点击了pageMenu,切换tableView
                 let tag = ( dic[keyData] as! Int ) - 100
                 weakSelf.scrollView.setContentOffset(CGPoint(x: Screen_Width * CGFloat(tag), y: 0), animated: false)
                 
@@ -165,14 +166,10 @@ class HomeViewController: SuperViewController {
 
 }
 
-extension HomeViewController {
+extension HomeViewController : UIScrollViewDelegate {
     
-    
-    @objc func subTableScorllow(noti : Notification)  {
-        
-        
-        
-    }
+
+   
     
     
 }
