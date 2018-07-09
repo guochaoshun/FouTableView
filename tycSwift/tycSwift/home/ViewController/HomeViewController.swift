@@ -13,14 +13,16 @@ class HomeViewController: SuperViewController {
 
     var sonViewController = [BaseViewController]()
     
+    var startScrollX : CGFloat = 0
+    
     lazy var scrollView : UIScrollView = {
-        let sc = UIScrollView.init(frame: CGRect(x: 0, y: 0, width: Screen_Width, height: Screen_Height-topHeight-bottomHeight) )
+        let sc = UIScrollView.init(frame: CGRect(x: 0, y: 0, width: Screen_Width, height: Screen_Height) )
         sc.showsVerticalScrollIndicator = false
         sc.showsHorizontalScrollIndicator = false
         sc.contentSize = CGSize.init(width: Screen_Width*4, height: 0)
         sc.isPagingEnabled = true
         sc.delegate = self
-        sc.isScrollEnabled = false
+//        sc.isScrollEnabled = false
         sc.contentInsetAdjustmentBehavior = .never
         
         let first = FirstViewController()
@@ -114,18 +116,18 @@ class HomeViewController: SuperViewController {
             if keyStr == "tapPageMenu" {
                 // 点击了pageMenu,切换tableView
                 let tag = ( dic[keyData] as! Int ) - 100
+
                 weakSelf.scrollView.setContentOffset(CGPoint(x: Screen_Width * CGFloat(tag), y: 0), animated: false)
-                
 
                 let subTable = weakSelf.sonViewController[tag].subTable
                 subTable?.tableHeaderView?.addSubview(weakSelf.headerView)
-                
+                weakSelf.headerView.x = 0
+                weakSelf.headerView.y = 0
                 
                 subTable?.contentOffset = CGPoint(x: 0 , y :  topHeight + HomeTopView.ViewHeight - weakSelf.pageMenu.y)
                 
                 weakSelf.pageMenu.x = Screen_Width * CGFloat(tag)
                 
-                weakSelf.scrollView.addSubview(weakSelf.pageMenu)
             }
             
            
@@ -168,7 +170,79 @@ class HomeViewController: SuperViewController {
 
 extension HomeViewController : UIScrollViewDelegate {
     
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        pageMenu.x = scrollView.contentOffset.x
+        
+        scrollView.addSubview(headerView)
+        
+        headerView.x = scrollView.contentOffset.x
+        
 
+        headerView.maxY = pageMenu.y
+
+        startScrollX = scrollView.contentOffset.x
+    }
+    
+    
+ 
+    
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        
+        pageMenu.x = scrollView.contentOffset.x
+        headerView.x = scrollView.contentOffset.x
+        headerView.maxY = pageMenu.y
+
+        
+        var target = Int(scrollView.contentOffset.x/scrollView.width)
+        if scrollView.contentOffset.x > startScrollX {
+            target = Int(scrollView.contentOffset.x/scrollView.width) + 1
+            
+            if target >= sonViewController.count {
+                target = target - 1
+            }
+            
+        }
+        
+        let subTable = self.sonViewController[target].subTable
+        subTable?.contentOffset = CGPoint(x: 0 , y :  topHeight + HomeTopView.ViewHeight - self.pageMenu.y)
+        
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        if decelerate {
+            return
+        }
+        
+        finishDragAndGoingToChangeTable(scrollView: scrollView)
+
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        finishDragAndGoingToChangeTable(scrollView: scrollView)
+        
+    }
+    
+    // scrollView.setContentOffset(CGPoint(x: Screen_Width * CGFloat(tag), y: 0), animated: true)
+    // 当为true时,结束动画回到这里
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        finishDragAndGoingToChangeTable(scrollView: scrollView)
+    }
+    
+    func finishDragAndGoingToChangeTable(scrollView: UIScrollView)  {
+        
+        let tag = Int(scrollView.contentOffset.x / scrollView.width)
+        let subTable = self.sonViewController[tag].subTable
+        subTable?.tableHeaderView?.addSubview(headerView)
+        headerView.x = 0
+        headerView.y = 0
+        
+        self.pageMenu.tapPageMenu(self.pageMenu.buttonArray[tag])
+    }
    
     
     

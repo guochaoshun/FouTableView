@@ -27,7 +27,7 @@ class PageMenuView: SuperView {
     
     @IBAction func tapPageMenu(_ sender: UIButton) {
         
-        print(11111111)
+
         for button in buttonArray {
             button.isSelected = false
         }
