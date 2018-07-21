@@ -28,16 +28,21 @@ class PageMenuView: SuperView {
     @IBAction func tapPageMenu(_ sender: UIButton) {
         
 
-        for button in buttonArray {
-            button.isSelected = false
-        }
-        sender.isSelected = true
+        tapMenuChangeUI(selectedButton: sender)
         
         self.callBack?( [keyString:"tapPageMenu",keyData:sender.tag] )
         
     }
     
-    
+    func tapMenuChangeUI(selectedButton : UIButton)  {
+        
+        
+        for button in buttonArray {
+            button.isSelected = false
+        }
+        selectedButton.isSelected = true
+        
+    }
     
     
     

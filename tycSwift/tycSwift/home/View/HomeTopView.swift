@@ -40,7 +40,6 @@ class HomeTopView: SuperView {
         loadMidDataFromNet()
         loadDownDataFromNet()
         
-        
         button.addBlockAction(for: .touchUpInside) {
             [weak self] in
             guard let weakSelf = self else {
@@ -63,6 +62,7 @@ class HomeTopView: SuperView {
         flowLayout.footerReferenceSize = CGSize(width: upView.width * 0.4, height: midView.height)
 
         let adView = ADCollectionView.init(frame: self.upView.bounds, collectionViewLayout: flowLayout)
+        adView.width = Screen_Width - 15
         self.upView.addSubview(adView)
         return adView
     }()

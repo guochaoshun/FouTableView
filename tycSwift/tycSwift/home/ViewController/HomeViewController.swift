@@ -51,6 +51,7 @@ class HomeViewController: SuperViewController {
         sonViewController.append(four)
 
         
+        
         self.view.addSubview(sc)
         
         
@@ -119,12 +120,26 @@ class HomeViewController: SuperViewController {
 
                 weakSelf.scrollView.setContentOffset(CGPoint(x: Screen_Width * CGFloat(tag), y: 0), animated: false)
 
-                let subTable = weakSelf.sonViewController[tag].subTable
-                subTable?.tableHeaderView?.addSubview(weakSelf.headerView)
+                guard let subTable = weakSelf.sonViewController[tag].subTable else {return}
+                
+                subTable.tableHeaderView?.addSubview(weakSelf.headerView)
                 weakSelf.headerView.x = 0
                 weakSelf.headerView.y = 0
+                if weakSelf.pageMenu.y > topHeight {
+                    
+                    subTable.contentOffset = CGPoint(x: 0 , y :  topHeight + HomeTopView.ViewHeight - weakSelf.pageMenu.y)
+
+                } else {
+                    
+                    subTable.contentOffset = CGPoint(x: 0 , y :  topHeight + HomeTopView.ViewHeight - weakSelf.pageMenu.y + subTable.contentOffset.y)
+
+                    // 如果超出了底部,那就到底部就好
+                    if subTable.contentOffset.y > subTable.contentSize.height-subTable.height {
+                        subTable.contentOffset = CGPoint(x: 0 , y : subTable.contentSize.height - subTable.height)
+                    }
+                    
+                }
                 
-                subTable?.contentOffset = CGPoint(x: 0 , y :  topHeight + HomeTopView.ViewHeight - weakSelf.pageMenu.y)
                 
                 weakSelf.pageMenu.x = Screen_Width * CGFloat(tag)
                 
@@ -241,7 +256,9 @@ extension HomeViewController : UIScrollViewDelegate {
         headerView.x = 0
         headerView.y = 0
         
-        self.pageMenu.tapPageMenu(self.pageMenu.buttonArray[tag])
+        self.pageMenu.tapMenuChangeUI(selectedButton : self.pageMenu.buttonArray[tag])
+
+        
     }
    
     

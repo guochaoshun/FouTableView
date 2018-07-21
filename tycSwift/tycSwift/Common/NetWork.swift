@@ -17,8 +17,6 @@ struct ErrorMessage : Error {
 }
 
 
-//let Host = "http://yongchengyimei.com/api"
-let Host = "http://tyc.dev.internet.zhiwangyilian.com/api"
 
 class NetWork: NSObject {
     

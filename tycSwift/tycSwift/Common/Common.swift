@@ -8,6 +8,8 @@
 
 // 定义全局的常量
 
+let Host = "http://yongchengyimei.com/api"
+//let Host = "http://tyc.dev.internet.zhiwangyilian.com/api"
 
 let Screen_Width = UIScreen.main.bounds.size.width
 let Screen_Height = UIScreen.main.bounds.size.height
