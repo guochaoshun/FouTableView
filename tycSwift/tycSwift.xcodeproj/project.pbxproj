@@ -31,6 +31,7 @@
 		9C664A1220ECA3B4005CFC2F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C664A1120ECA3B4005CFC2F /* HomeViewController.swift */; };
 		9C664A4F20ECC8AA005CFC2F /* PageMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C664A4E20ECC8AA005CFC2F /* PageMenuView.swift */; };
 		9C664A5120ECC8F4005CFC2F /* PageMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C664A5020ECC8F3005CFC2F /* PageMenu.xib */; };
+		9C80F583212BED7C00AEEEF1 /* UITextField+MaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C80F579212BED7C00AEEEF1 /* UITextField+MaxLength.m */; };
 		9CB66A8B20C7F03900E05FA3 /* ADCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB66A8A20C7F03900E05FA3 /* ADCollectionView.swift */; };
 		9CB66A9620C7F21300E05FA3 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB66A9420C7F21300E05FA3 /* ImageCell.swift */; };
 		9CB66A9720C7F21300E05FA3 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB66A9520C7F21300E05FA3 /* ImageCell.xib */; };
@@ -193,6 +194,8 @@
 		9C664A1120ECA3B4005CFC2F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C664A4E20ECC8AA005CFC2F /* PageMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMenuView.swift; sourceTree = "<group>"; };
 		9C664A5020ECC8F3005CFC2F /* PageMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageMenu.xib; sourceTree = "<group>"; };
+		9C80F579212BED7C00AEEEF1 /* UITextField+MaxLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+MaxLength.m"; path = "../../../UITextField-MaxLength/web调用/UITextField+MaxLength.m"; sourceTree = "<group>"; };
+		9C80F582212BED7C00AEEEF1 /* UITextField+MaxLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+MaxLength.h"; path = "../../../UITextField-MaxLength/web调用/UITextField+MaxLength.h"; sourceTree = "<group>"; };
 		9CB66A8A20C7F03900E05FA3 /* ADCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADCollectionView.swift; sourceTree = "<group>"; };
 		9CB66A9420C7F21300E05FA3 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		9CB66A9520C7F21300E05FA3 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 		9C3C6CCB20C63E8400EA8699 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9C80F582212BED7C00AEEEF1 /* UITextField+MaxLength.h */,
+				9C80F579212BED7C00AEEEF1 /* UITextField+MaxLength.m */,
 				9CC207FB20C1309200896A4F /* Dictionary.swift */,
 				9CDFD69B20C803650037206D /* UIImageView.swift */,
 				9C3C6CC720C62CED00EA8699 /* NSArray+log.h */,
@@ -770,6 +775,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C80F583212BED7C00AEEEF1 /* UITextField+MaxLength.m in Sources */,
 				9C664A0420ECA33F005CFC2F /* SecondViewController.swift in Sources */,
 				9CC2078920C1248600896A4F /* ViewController.swift in Sources */,
 				9C39061E20CFCB8900C95BB4 /* NineImagesView.swift in Sources */,
