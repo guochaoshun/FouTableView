@@ -1,0 +1,3 @@
+[submodule "UITextField-MaxLength"]
+	path = UITextField-MaxLength
+	url = https://github.com/guochaoshun/UITextField-MaxLength.git

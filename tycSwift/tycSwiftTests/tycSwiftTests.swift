@@ -23,12 +23,14 @@ class tycSwiftTests: XCTestCase {
     
     func testExample() {
      
+
+        let a = 312
+        let s = "\(a) is djjj"
+
         
 
-
-
-
-
+        
+        
     }
     
     func testPerformanceExample() {
