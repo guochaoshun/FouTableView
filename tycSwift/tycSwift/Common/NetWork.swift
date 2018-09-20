@@ -48,10 +48,6 @@ class NetWork: NSObject {
         params["userToken"] = "335415593487909658"
         
         
-//        AFJSONResponseSerializer *response = [AFJSONResponseSerializer serializer];
-//        response.removesKeysWithNullValues = YES;
-        
-//        let jsonSerialization = JSONSerialization.init()
         
         
 //        Alamofire.JSONSerialization = jsonSerialization
