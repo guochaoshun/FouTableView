@@ -87,14 +87,6 @@ class HomeViewController: SuperViewController {
             print(weakSelf)
             print(keyStr,data)
         }
-        // 错误写法,导致内存无法释放
-        //        headerView.callBackWith = {
-        //             (keyStr,data) in
-        //
-        //           print(self)
-        //            print(keyStr,data)
-        //        }
-        
         return headerView
     }()
     

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class ViewController: SuperViewController , UITableViewDelegate,UITableViewDataSource {
 
@@ -26,23 +25,6 @@ class ViewController: SuperViewController , UITableViewDelegate,UITableViewDataS
  
     func loadData() {
         
-        Alamofire.request("http://www.ipip5.com/today/api.php", method: .get, parameters: ["type":"json"]).responseJSON { (data) in
-            
-            guard let data = data.value as? [String : Any] else {
-                return
-            }
-            
-            let array = data["result"] as! [ [String:AnyObject] ]
-            for dic in array {
-                
-                let model = AModel.init(dic)
-                
-                self.dataSourse.append(model)
-            }
-            print(self.dataSourse)
-            
-            self.tableView.reloadData()
-        }
         
     }
     
