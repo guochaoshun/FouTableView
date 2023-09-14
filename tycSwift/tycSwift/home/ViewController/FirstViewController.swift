@@ -38,8 +38,12 @@ class FirstViewController: BaseViewController  {
         super.viewDidLoad()
         
         loadDataFromNet()
-   
-        
+
+        for _ in 0 ..< 30 {
+            let model = HomeDiaryModel.init(data: ["a":"1"] as [String: AnyObject])
+            self.dataArray.append(model)
+        }
+        self.tableView.reloadData()
     }
 
    
@@ -85,33 +89,6 @@ extension FirstViewController {
     
     
     func loadDataFromNet() {
-        
-        let netWork = NetWork.init()
-        netWork.url = "/client-community/client/community/hot/hotList"
-        netWork.params = ["pageIndex":"0" ,"pageSize":"10"]
-        
-        netWork.responseData = {
-            [weak self] (data) in
-            guard let weakSelf = self else {
-                return
-            }
-            
-            weakSelf.dataArray.removeAll()
-            let array = data.resultInfo as!  [ [String:AnyObject] ]
-            for item in array {
-                let model = HomeDiaryModel.init(data : item)
-                weakSelf.dataArray.append(model)
-            }
-            
-            weakSelf.tableView.reloadData()
-        }
-        
-        netWork.failReason = {
-            (error) in
-            print(error)
-        }
-        
-        netWork.startRequest()
         
         
     }

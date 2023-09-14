@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,7 +42,6 @@
 		9CC2079C20C1248F00896A4F /* tycSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2079B20C1248F00896A4F /* tycSwiftTests.swift */; };
 		9CC207A720C1248F00896A4F /* tycSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC207A620C1248F00896A4F /* tycSwiftUITests.swift */; };
 		9CC207DF20C126BB00896A4F /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC207DE20C126BB00896A4F /* NetWork.swift */; };
-		9CC207FA20C128E300896A4F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC207EC20C128C400896A4F /* Alamofire.framework */; };
 		9CC207FC20C1309200896A4F /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC207FB20C1309200896A4F /* Dictionary.swift */; };
 		9CDFD69A20C801290037206D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDFD69920C801290037206D /* Kingfisher.framework */; };
 		9CDFD69C20C803650037206D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDFD69B20C803650037206D /* UIImageView.swift */; };
@@ -113,55 +112,6 @@
 			remoteGlobalIDString = 9CC2078220C1248600896A4F;
 			remoteInfo = tycSwift;
 		};
-		9CC207EB20C128C400896A4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CC207E020C128C300896A4F /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		9CC207ED20C128C400896A4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CC207E020C128C300896A4F /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		9CC207EF20C128C400896A4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CC207E020C128C300896A4F /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire macOS";
-		};
-		9CC207F120C128C400896A4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CC207E020C128C300896A4F /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire macOS Tests";
-		};
-		9CC207F320C128C400896A4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CC207E020C128C300896A4F /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS";
-		};
-		9CC207F520C128C400896A4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CC207E020C128C300896A4F /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS Tests";
-		};
-		9CC207F720C128C400896A4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CC207E020C128C300896A4F /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4202FE01B667AA100C997FB;
-			remoteInfo = "Alamofire watchOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -212,7 +162,6 @@
 		9CC207A620C1248F00896A4F /* tycSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tycSwiftUITests.swift; sourceTree = "<group>"; };
 		9CC207A820C1248F00896A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CC207DE20C126BB00896A4F /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
-		9CC207E020C128C300896A4F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		9CC207FB20C1309200896A4F /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		9CDFD68F20C800FC0037206D /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CDFD69920C801290037206D /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,7 +176,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CDFD69A20C801290037206D /* Kingfisher.framework in Frameworks */,
-				9CC207FA20C128E300896A4F /* Alamofire.framework in Frameworks */,
 				E09A95E10C6A62D4AE5031F4 /* Pods_tycSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +314,6 @@
 		9CC2077A20C1248600896A4F = {
 			isa = PBXGroup;
 			children = (
-				9CC207E020C128C300896A4F /* Alamofire.xcodeproj */,
 				9CC2078520C1248600896A4F /* tycSwift */,
 				9CC2079A20C1248F00896A4F /* tycSwiftTests */,
 				9CC207A520C1248F00896A4F /* tycSwiftUITests */,
@@ -430,20 +377,6 @@
 			path = ThirdPart;
 			sourceTree = "<group>";
 		};
-		9CC207E120C128C300896A4F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9CC207EC20C128C400896A4F /* Alamofire.framework */,
-				9CC207EE20C128C400896A4F /* Alamofire iOS Tests.xctest */,
-				9CC207F020C128C400896A4F /* Alamofire.framework */,
-				9CC207F220C128C400896A4F /* Alamofire macOS Tests.xctest */,
-				9CC207F420C128C400896A4F /* Alamofire.framework */,
-				9CC207F620C128C400896A4F /* Alamofire tvOS Tests.xctest */,
-				9CC207F820C128C400896A4F /* Alamofire.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9CC207F920C128E300896A4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,7 +410,6 @@
 				9CC2078020C1248600896A4F /* Frameworks */,
 				9CC2078120C1248600896A4F /* Resources */,
 				A5C4249EFE0FE029E181BF7F /* [CP] Embed Pods Frameworks */,
-				8B61A092B07E9ED1B24326CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -561,10 +493,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9CC207E120C128C300896A4F /* Products */;
-					ProjectRef = 9CC207E020C128C300896A4F /* Alamofire.xcodeproj */;
-				},
-				{
 					ProductGroup = 9CB66A9920C7F70700E05FA3 /* Products */;
 					ProjectRef = 9CB66A9820C7F70700E05FA3 /* Kingfisher.xcodeproj */;
 				},
@@ -628,55 +556,6 @@
 			remoteRef = 9CB66AAE20C7F70700E05FA3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9CC207EC20C128C400896A4F /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 9CC207EB20C128C400896A4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9CC207EE20C128C400896A4F /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = 9CC207ED20C128C400896A4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9CC207F020C128C400896A4F /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 9CC207EF20C128C400896A4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9CC207F220C128C400896A4F /* Alamofire macOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire macOS Tests.xctest";
-			remoteRef = 9CC207F120C128C400896A4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9CC207F420C128C400896A4F /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 9CC207F320C128C400896A4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9CC207F620C128C400896A4F /* Alamofire tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire tvOS Tests.xctest";
-			remoteRef = 9CC207F520C128C400896A4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9CC207F820C128C400896A4F /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 9CC207F720C128C400896A4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -712,37 +591,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8B61A092B07E9ED1B24326CF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tycSwift/Pods-tycSwift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A5C4249EFE0FE029E181BF7F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-tycSwift/Pods-tycSwift-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tycSwift/Pods-tycSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tycSwift/Pods-tycSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tycSwift/Pods-tycSwift-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tycSwift/Pods-tycSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C3FE80046AD531EFB834BE73 /* [CP] Check Pods Manifest.lock */ = {
